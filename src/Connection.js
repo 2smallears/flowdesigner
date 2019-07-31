@@ -26,6 +26,8 @@ export default class Connection{
 
     buildConnectionName(fromNode){
         let conns=fromNode.fromConnections,name=null;
+        console.log(conns)
+        console.log(conns.length)
         if(conns.length===0){
             return null;
         }
@@ -235,7 +237,7 @@ export default class Connection{
             return 'M'+x1+' '+y1+' L'+x2+' '+y2;
         }
     }
-    
+
     _buildFromFigureIntersetion(path,c){
         if(c){
             const fromRect=this.from.rect;
@@ -272,7 +274,7 @@ export default class Connection{
         }
         return null;
     }
-    
+
     _buildCurveLinePathInfo(){
         const fromRect=this.from.rect;
         let x1=fromRect.attr('x'),y1=fromRect.attr('y'),w1=fromRect.attr('width'),h1=fromRect.attr('height');
