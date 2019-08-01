@@ -26,9 +26,7 @@ export default class Connection{
 
     buildConnectionName(fromNode){
         let conns=fromNode.fromConnections,name=null;
-        console.log(conns)
-        console.log(conns.length)
-        if(conns.length===0){
+        if(conns.length===0 && conns[0].from.constructor.name !== 'DecisionNode'){
             return null;
         }
         for(let i=0;i<1000000;i++){
