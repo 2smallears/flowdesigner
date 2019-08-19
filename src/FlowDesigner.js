@@ -217,6 +217,7 @@ export default class FlowDesigner{
         </button>`);
         this.toolbar.append(removeTool);
         removeTool.click(function (e) {
+            console.log('delete rule')
             context.cancelConnection();
             event.eventEmitter.emit(event.REMOVE_CLICKED);
             _this.nodeToolbar.children('label').removeClass('active');
